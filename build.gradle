@@ -21,7 +21,6 @@ ext {
 
 allprojects {
     apply plugin: 'java-library'
-    apply plugin: 'checkstyle'
 
     group = 'org.javacord'
     description = 'An easy to use multithreaded library for creating Discord bots in Java'
@@ -37,11 +36,6 @@ allprojects {
                 options.compilerArgs << '--release' << platform.targetCompatibility.majorVersion
             }
         }
-    }
-
-    checkstyle {
-        toolVersion '8.9'
-        maxWarnings 0
     }
 
     normalization {
